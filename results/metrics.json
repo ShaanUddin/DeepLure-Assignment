@@ -1,0 +1,103 @@
+{
+  "split": "test",
+  "test_designs": 126,
+  "test_gallery_images": 314,
+  "results": {
+    "imagenet_rgb": {
+      "id_colorway_heldout": {
+        "top1": 0.43121692538261414,
+        "top5": 0.6402116417884827,
+        "mAP": 0.53769451379776
+      },
+      "id_colorway_trainfamily": {
+        "top1": 0.6058201193809509,
+        "top5": 0.7698412537574768,
+        "mAP": 0.6744338870048523
+      },
+      "id_palette_adversarial": {
+        "top1": 0.19312169899543127,
+        "top5": 0.42592594027519226,
+        "mAP": 0.3114778796831767,
+        "same_palette_confusion": 0.7751322587331136
+      },
+      "verification": {
+        "auc": 0.827396699420509,
+        "eer": 0.23412698412698413,
+        "tar@far1%": 0.14682539682539683,
+        "eer_threshold": 0.5128569006919861,
+        "threshold_used": 0.5333153605461121,
+        "accuracy": 0.7797619047619048,
+        "same_palette_negative_reject_rate": 0.6984126984126984,
+        "pairs": {
+          "positive": 252,
+          "same_palette_negative": 126,
+          "different_palette_negative": 126
+        }
+      }
+    },
+    "imagenet_structure_stem": {
+      "id_colorway_heldout": {
+        "top1": 0.34656083583831787,
+        "top5": 0.5317460298538208,
+        "mAP": 0.4422107934951782
+      },
+      "id_colorway_trainfamily": {
+        "top1": 0.5449735522270203,
+        "top5": 0.7275132536888123,
+        "mAP": 0.6318662762641907
+      },
+      "id_palette_adversarial": {
+        "top1": 0.4100529154141744,
+        "top5": 0.6322751442591349,
+        "mAP": 0.5192269881566366,
+        "same_palette_confusion": 0.34391534825166065
+      },
+      "verification": {
+        "auc": 0.718190980095742,
+        "eer": 0.34126984126984133,
+        "tar@far1%": 0.1626984126984127,
+        "eer_threshold": 0.7035314440727234,
+        "threshold_used": 0.7341514825820923,
+        "accuracy": 0.6765873015873016,
+        "same_palette_negative_reject_rate": 0.7222222222222222,
+        "pairs": {
+          "positive": 252,
+          "same_palette_negative": 126,
+          "different_palette_negative": 126
+        }
+      }
+    },
+    "sareenet": {
+      "id_colorway_heldout": {
+        "top1": 0.6666666865348816,
+        "top5": 0.8306878209114075,
+        "mAP": 0.7488657832145691
+      },
+      "id_colorway_trainfamily": {
+        "top1": 0.8941798806190491,
+        "top5": 0.976190447807312,
+        "mAP": 0.9310411810874939
+      },
+      "id_palette_adversarial": {
+        "top1": 0.7910052935282389,
+        "top5": 0.9550264477729797,
+        "mAP": 0.8641552925109863,
+        "same_palette_confusion": 0.11640211939811707
+      },
+      "verification": {
+        "auc": 0.9701436130007559,
+        "eer": 0.07936507936507936,
+        "tar@far1%": 0.75,
+        "eer_threshold": 0.4474157691001892,
+        "threshold_used": 0.5223853588104248,
+        "accuracy": 0.9067460317460317,
+        "same_palette_negative_reject_rate": 0.8888888888888888,
+        "pairs": {
+          "positive": 252,
+          "same_palette_negative": 126,
+          "different_palette_negative": 126
+        }
+      }
+    }
+  }
+}

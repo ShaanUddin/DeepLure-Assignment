@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+data/
+results_smoke/
+checkpoints/smoke.pt
+*.pyc
