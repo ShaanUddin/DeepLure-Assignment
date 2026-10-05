@@ -4,7 +4,7 @@ PyTorch system that embeds a saree image into a 128-d vector so the same design 
 
 ## Approach note
 
-MobileNetV3-L (ImageNet) on a colour-free stem (standardised gray, Sobel magnitude, local contrast) -> GeM -> 128-d L2 embedding. Each deduplicated image is one design; synthetic colourways (hue rotation, channel permute/invert, random curves, gradient maps) + crop/flip/rotate/blur make positives. SupCon loss (t=0.1), 48 designs x 2 views; in 50% of batches all 2nd views share one palette -> same-palette hard negatives. Cosine ranking; threshold = val EER.
+Pre: RGB->256->224; colour-free stem (gray, Sobel magnitude, local contrast) drops palette before learning. Model: ImageNet MobileNetV3-L (lean, 3.1M params) -> GeM -> 128-d L2 embedding. Train: each deduped image = a design; positives = synthetic colourways (hue rotate, channel permute/invert, curves, gradient maps) + crop/flip/rotate/blur; SupCon (t=0.1), 48 designs x 2 views, 50% of batches share one palette = same-palette hard negatives. Post: cosine ranking; threshold = val EER.
 
 ## Results (test split, 126 unseen designs)
 
